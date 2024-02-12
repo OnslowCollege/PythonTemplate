@@ -42,11 +42,6 @@ while main_loop:
                       "\nPlease try again with another name.")
 
 
-            else:
-                get_name = False if bidder == list(bidding_history.keys())[-1] else 
-
-
-
     if bidders_name.lower() == "f":
         main_loop = False
 
