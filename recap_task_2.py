@@ -30,9 +30,9 @@ while main_loop:
     print("Action has started")
     print(f"Current highest bid is ${highest_bid}")
 
-    bidders_name = input("What is your name? (Y/N to finish) ")
+    bidders_name = input("What is your name? ('F' to finish) ")
 
-    if bidders_name.lower() == "y" or bidders_name.lower() == "n":
+    if bidders_name.lower() == "f":
         main_loop = False
 
         for bidder in bidding_history.keys():
