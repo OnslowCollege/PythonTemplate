@@ -34,6 +34,9 @@ while main_loop:
 
     bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
+    for bidders_name in bidding_history.keys():
+        bidders_name = bidders_name + ""
+
     if bidders_name.lower() == "f":
         main_loop = False
 
