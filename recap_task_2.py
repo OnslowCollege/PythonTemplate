@@ -23,14 +23,16 @@ while main_loop:
 
             if reserve_price < 0:
                 print("Please enter a number 0 or above.")
+            
+            else:
+                print("\nAction has started")
 
         except ValueError:
             print("Please enter a number 0 or above.")
 
-    print("Action has started")
     print(f"Current highest bid is ${highest_bid}")
 
-    bidders_name = input("What is your name? ('F' to finish) ")
+    bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
     if bidders_name.lower() == "f":
         main_loop = False
