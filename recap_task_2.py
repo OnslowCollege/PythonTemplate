@@ -12,7 +12,7 @@ bidders_name: str = ""
 bidding_history: dict = {}
 reserve_price: float = -1
 main_loop: bool = True
-
+get_bid_amount: bool = True
 
 # Main loop
 while main_loop:
@@ -38,7 +38,8 @@ while main_loop:
         for bidder in bidding_history.keys():
             print(f"{bidder}, bid {bidding_history[bidder]}$")
     else:
-        while current_bid < highest_bid:
+        get_bid_amount = True
+        while get_bid_amount:
             try:
                 current_bid = float(input("\nWhat is your bid? ($): "))
 
@@ -47,6 +48,7 @@ while main_loop:
                         f"\nPlease enter amount above ${highest_bid}")
 
                 else:
+                    get_bid_amount = False
                     highest_bid = current_bid
                     bidding_history[bidders_name] = highest_bid
             except ValueError:
