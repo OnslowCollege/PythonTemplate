@@ -35,14 +35,14 @@ while main_loop:
 
     bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
-    if bidders_name in bidding_history.keys():
+    if bidders_name in bidding_history.items():
         name_counter += 1
         bidders_name = bidders_name + str(name_counter)
 
     if bidders_name.lower() == "f":
         main_loop = False
 
-        for bidder in bidding_history.keys():
+        for bidder in bidding_history.items():
             print(f"{bidder}, bid {bidding_history[bidder]}$")
     else:
         get_bid_amount = True
