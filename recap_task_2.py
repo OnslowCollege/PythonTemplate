@@ -53,5 +53,6 @@ while main_loop:
                     get_bid_amount = False
                     highest_bid = current_bid
                     bidding_history[bidders_name] = highest_bid
+
             except ValueError:
                 print(f"Please enter a number above ${highest_bid}.")
