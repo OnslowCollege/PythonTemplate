@@ -13,7 +13,6 @@ bidding_history: dict = {}
 reserve_price: float = -1
 main_loop: bool = True
 get_bid_amount: bool = True
-get_name: bool = True
 
 # Main loop
 while main_loop:
@@ -33,14 +32,7 @@ while main_loop:
 
     print(f"\nCurrent highest bid is ${highest_bid}")
 
-    while get_name:
-        bidders_name = input("\nWhat is your name? ('F' to finish) ")
-
-        for bidder in bidding_history.keys():
-            if bidders_name == bidder:
-                print("Bidder can't bid twice!"
-                      "\nPlease try again with another name.")
-
+    bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
     if bidders_name.lower() == "f":
         main_loop = False
