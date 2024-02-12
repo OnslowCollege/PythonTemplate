@@ -15,6 +15,13 @@ main_loop: bool = True
 get_bid_amount: bool = True
 get_name: bool = True
 
+
+def get_bidder_name():
+    """Get bidders name and return value."""
+
+    return input("\nWhat is your name? ('F' to finish) ")
+
+
 # Main loop
 while main_loop:
 
@@ -33,15 +40,14 @@ while main_loop:
 
     print(f"\nCurrent highest bid is ${highest_bid}")
 
-    get_name = True
-    while get_name:
-        bidders_name = input("\nWhat is your name? ('F' to finish) ")
+    bidders_name = get_bidder_name()
 
-        for bidder in bidding_history.keys():
-            if bidders_name == bidder:
-                print("Bidder can't bid twice!"
-                      "\nPlease try again with another name.")
-            
+    for bidder in bidding_history.keys():
+        if bidders_name == bidder:
+            print("Bidder can't bid twice!"
+                    "\nPlease try again with another name.")
+
+            bidders_name = get_bidder_name()
 
     if bidders_name.lower() == "f":
         main_loop = False
