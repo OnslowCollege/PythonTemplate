@@ -16,7 +16,6 @@ main_loop: bool = True
 
 # Main loop
 while main_loop:
-    reserve_price = -1
 
     while reserve_price < 0:
         try:
