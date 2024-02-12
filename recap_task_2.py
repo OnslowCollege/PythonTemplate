@@ -42,11 +42,9 @@ while main_loop:
                 print("Bidder can't bid twice!"
                       "\nPlease try again with another name.")
 
-            elif bidder == bidding_history.keys(-1):
+            elif bidder == bidding_history.keys()[-1]:
                 get_name = False
-                
-
-
+                break
 
     if bidders_name.lower() == "f":
         main_loop = False
