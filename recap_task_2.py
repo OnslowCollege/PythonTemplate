@@ -37,14 +37,13 @@ while main_loop:
     while get_name:
         bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
-        for
-        num_bidders = len(bidding_history.keys())
-
         for bidder in bidding_history.keys():
             if bidders_name == bidder:
                 print("Bidder can't bid twice!"
                       "\nPlease try again with another name.")
-            elif num_bidders
+
+            elif bidder == bidding_history.keys(-1):
+                get_name = False
                 
 
 
