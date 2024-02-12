@@ -32,6 +32,7 @@ while main_loop:
 
     print(f"\nCurrent highest bid is ${highest_bid}")
 
+    while 
     bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
     if bidders_name.lower() == "f":
