@@ -13,8 +13,7 @@ bidding_history: dict = {}
 reserve_price: float = -1
 main_loop: bool = True
 get_bid_amount: bool = True
-
-counter: int = 0
+name_counter: int = 1
 
 # Main loop
 while main_loop:
@@ -37,8 +36,8 @@ while main_loop:
     bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
     if bidders_name in bidding_history.keys():
-        counter += 1
-        bidders_name = bidders_name + str(counter)
+        name_counter += 1
+        bidders_name = bidders_name + str(name_counter)
 
     if bidders_name.lower() == "f":
         main_loop = False
