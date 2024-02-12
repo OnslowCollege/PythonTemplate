@@ -25,12 +25,12 @@ while main_loop:
                 print("Please enter a number 0 or above.")
             
             else:
-                print("\nAction has started")
+                print("Action has started")
 
         except ValueError:
             print("Please enter a number 0 or above.")
 
-    print(f"Current highest bid is ${highest_bid}")
+    print(f"\nCurrent highest bid is ${highest_bid}")
 
     bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
@@ -43,7 +43,7 @@ while main_loop:
         get_bid_amount = True
         while get_bid_amount:
             try:
-                current_bid = float(input("\nWhat is your bid? ($): "))
+                current_bid = float(input("What is your bid? ($): "))
 
                 if current_bid <= highest_bid:
                     print("Your bid isn't high enough!"
