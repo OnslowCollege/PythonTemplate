@@ -43,9 +43,9 @@ while main_loop:
             try:
                 current_bid = float(input("\nWhat is your bid? ($): "))
 
-                if current_bid < highest_bid:
+                if current_bid <= highest_bid:
                     print("Your bid isn't high enough!"
-                        f"Please enter amount above ${highest_bid}")
+                        f"\nPlease enter amount above ${highest_bid}")
 
                 else:
                     highest_bid = current_bid
