@@ -33,7 +33,6 @@ while main_loop:
 
     print(f"\nCurrent highest bid is ${highest_bid}")
 
-    get_name = True
     while get_name:
         bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
@@ -42,9 +41,11 @@ while main_loop:
                 print("Bidder can't bid twice!"
                       "\nPlease try again with another name.")
 
-            elif bidder == bidding_history.keys()[-1]:
-                get_name = False
-                break
+
+            else:
+                get_name = False if bidder == list(bidding_history.keys())[-1] else 
+
+
 
     if bidders_name.lower() == "f":
         main_loop = False
