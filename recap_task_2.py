@@ -9,7 +9,9 @@ Date: 12/02/2024
 highest_bid: float = 0
 current_bid: float = -1
 bidders_name: str = ""
-bidding_history: dict = {}
+# bidding_history: dict = {}
+past_names: list = []
+past_prices: list = []
 reserve_price: float = -1
 main_loop: bool = True
 get_bid_amount: bool = True
