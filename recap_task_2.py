@@ -15,7 +15,6 @@ past_prices: list = []
 reserve_price: float = -1
 main_loop: bool = True
 get_bid_amount: bool = True
-name_counter: int = 1
 
 # Main loop
 while main_loop:
@@ -45,24 +44,19 @@ while main_loop:
     # Get bidders name
     bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
-    # If bidder already bid add counter
-    if bidders_name in bidding_history:
-        name_counter += 1
-        bidders_name = bidders_name + str(name_counter)
-
     # If you want auction to stop
     if bidders_name.lower() == "f":
         main_loop = False
 
         # Check if reserve price was met
         if highest_bid >= reserve_price:
-            print(f"Action won by {list(bidding_history)[-1]}.")
+            print(f"Action won by {past_names[-1]}.")
         else:
             print(f"Reserve price of ${reserve_price} was not met.")
 
         # Print auction history from dictionary
-        for bidder in bidding_history:
-            print(f"{bidder}, bid {bidding_history[bidder]}$")
+        for i in range(len(past_names)):
+            print(f"{past_names[i]}, bid: ${past_prices[i]}")
 
     # If auction continues
     else:
@@ -84,7 +78,9 @@ while main_loop:
                 else:
                     get_bid_amount = False
                     highest_bid = current_bid
-                    bidding_history[bidders_name] = highest_bid
+
+                    past_names.append(bidders_name)
+                    past_prices.append(highest_bid)
 
             # If bidder did not enter a float/int
             except ValueError:
