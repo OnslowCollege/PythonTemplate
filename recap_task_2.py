@@ -54,7 +54,9 @@ while main_loop:
 
         # Check if reserve price was met
         if highest_bid >= reserve_price:
-            print(f"Action won by {bidding_history.keys()} ")
+            print(f"Action won by {list(bidding_history)[-1]}.")
+        else:
+            print(f"Reserve price of ${reserve_price} was not met.")
 
         # Print auction history from dictionary
         for bidder in bidding_history:
