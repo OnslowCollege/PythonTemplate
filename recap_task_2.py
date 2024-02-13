@@ -9,7 +9,6 @@ Date: 12/02/2024
 highest_bid: float = 0
 current_bid: float = -1
 bidders_name: str = ""
-# bidding_history: dict = {}
 past_names: list = []
 past_prices: list = []
 reserve_price: float = -1
@@ -79,6 +78,7 @@ while main_loop:
                     get_bid_amount = False
                     highest_bid = current_bid
 
+                    # Add bid details to stored list as history
                     past_names.append(bidders_name)
                     past_prices.append(highest_bid)
 
