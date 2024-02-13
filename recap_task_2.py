@@ -52,8 +52,10 @@ while main_loop:
     if bidders_name.lower() == "f":
         main_loop = False
 
+        # Check if reserve price was met
         if highest_bid >= reserve_price:
-            
+            print(f"Action won by {} ")
+
         # Print auction history from dictionary
         for bidder in bidding_history:
             print(f"{bidder}, bid {bidding_history[bidder]}$")
