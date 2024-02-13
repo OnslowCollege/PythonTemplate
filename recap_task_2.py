@@ -35,7 +35,7 @@ while main_loop:
 
     bidders_name = input("\nWhat is your name? ('F' to finish) ")
 
-    if bidders_name in bidding_history.items():
+    if bidders_name in bidding_history.keys():
         name_counter += 1
         bidders_name = bidders_name + str(name_counter)
 
