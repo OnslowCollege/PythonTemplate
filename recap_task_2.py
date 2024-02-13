@@ -58,8 +58,12 @@ while main_loop:
 
     # If auction continues
     else:
+
+        # Loop until bidders bids a valid amount
         get_bid_amount = True
         while get_bid_amount:
+
+            # Get bidders bid
             try:
                 current_bid = float(input("What is your bid? ($): "))
 
