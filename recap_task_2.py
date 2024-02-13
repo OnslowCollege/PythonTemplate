@@ -67,14 +67,17 @@ while main_loop:
             try:
                 current_bid = float(input("What is your bid? ($): "))
 
+                # If bidders bid is lower than current highest bid
                 if current_bid <= highest_bid:
                     print("Your bid isn't high enough!"
                         f"\nPlease enter amount above ${highest_bid}")
 
+                # If bid valid set current bid as the new highest bid
                 else:
                     get_bid_amount = False
                     highest_bid = current_bid
                     bidding_history[bidders_name] = highest_bid
 
+            # If bidder did not enter a float/int
             except ValueError:
                 print(f"Please enter a number above ${highest_bid}.")
