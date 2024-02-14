@@ -12,6 +12,8 @@ class Book:
     isbn: int
     availability: bool
 
+class LibraryCatalogue:
+    """Stores books."""
 
 
 "Huwi's First Egg", by Kat Mereweather, ISBN: 123 (1 copy available)
