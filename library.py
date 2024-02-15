@@ -113,14 +113,15 @@ class LibraryCatalogue:
 
         print("**Library Catalogue**")
         for book in self.books:
-            print(f"  - {book.title} by {book.autho")
+            print(f"  - {book.title} by {book.author}")
 
-
+# Main code for user interface
 def main():
-    """Where most things happen."""
+    """Get users input and call functions accordingly."""
 
     catalogue = LibraryCatalogue()
 
+    # Print out options
     get_choice = True
     while get_choice:
         print("\nLibrary Menu:")
@@ -131,8 +132,10 @@ def main():
         print("5. List all books")
         print("6. Exit")
 
+        # Get choice
         choice = input("Enter your choice: ")
 
+        # If user wants to add a book get details for book to add and do so
         if choice == "1":
             title = input("Enter book title: ")
             author = input("Enter author name: ")
@@ -140,27 +143,34 @@ def main():
             catalogue.add_book(Book(title, author, isbn))
             print("Book added successfully.")
 
+        # If user wants to remove a book ask for isbn of book to remove
         elif choice == "2":
             isbn = int(input("Enter ISBN of book to remove: "))
             catalogue.remove_book(isbn)
 
+        # If user wants to search for a book by title get title to search
         elif choice == "3":
             title = input("Enter book title to search: ")
             catalogue.search_by_title(title)
 
+        # If user wants to search for a book by isbn get isbn to search
         elif choice == "4":
             isbn = int(input("Enter ISBN to search: "))
             catalogue.search_by_isbn(isbn)
 
+        # If user wants to list out the books print out all books and details
         elif choice == "5":
             catalogue.list_books(isbn)
 
+        # If user wants to stop the program stop the loop and exit code
         elif choice == "6":
             print("Exiting library program.")
             get_choice = False
 
+        # If choice user entered was not listed
         else:
             print("Invalid choice. Please try again.")
 
+# Initialize code
 if __name__ == "__main__":
     main()
