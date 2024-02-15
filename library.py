@@ -7,13 +7,15 @@ Date: 14/02/2024
 
 class Book:
     """Create books."""
-    title: str
-    author: str
-    isbn: int
-    availability: bool
+    def __init__(self) -> None:
+        self.title: str
+        self.author: str
+        self.isbn: int
+        self.availability: bool
 
 class LibraryCatalogue:
     """Stores books."""
+
 
 
 "Huwi's First Egg", "Kat Mereweather", 123, (1 copy available)
