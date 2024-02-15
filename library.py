@@ -17,10 +17,11 @@ class Book:
 books = [
     Book("Huwi's First Egg", "Kat Mereweather", 123, True),
     Book("The Kuia and the Spider", "Patricia Grace", 124, True),
-    Book("Where the Wild Things Are", "Maurice Sendak", 345, True, 2),
-    Book("Under the Mountain", "Maurice Gee", 346, True, 1),
-    Book("How Māui Found His Father and the Magic Jawbone", "Peter Gossage", 410, True, 2),
+    Book("Where the Wild Things Are", "Maurice Sendak", 345, True),  # Remove extra argument
+    Book("Under the Mountain", "Maurice Gee", 346, True),  # Remove extra argument
+    Book("How Māui Found His Father and the Magic Jawbone", "Peter Gossage", 410, True),
 ]
+
 
 
 class LibraryCatalogue:
