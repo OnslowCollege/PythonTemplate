@@ -47,7 +47,8 @@ class LibraryCatalogue:
         print(f"Book with ISBN {isbn} not found in library.")
 
     def search_by_title(self, title: str):
-        matches = [book for book in self.books if title.lower() in book.title.lower()]
+        matches = [book for book in self.books if title.lower() \
+                   in book.title.lower()]
         if matches:
             print(f"Found {len(matches)} books matching '{title}':")
             for book in matches:
