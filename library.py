@@ -5,8 +5,10 @@ Created: by Arkin
 Date: 14/02/2024
 """
 
+# Imports
 from dataclasses import dataclass
 
+# Book class
 @dataclass
 class Book:
     """Stores book values."""
@@ -26,19 +28,22 @@ books = [
 ]
 
 
-
+# Catalogue class for saving books
 class LibraryCatalogue:
     """Stores books in cataloge."""
 
     def __init__(self):
-        """Adds the details to the book."""
+        """Add the details to the book."""
 
         self.books = books
 
     def add_book(self, book: Book):
+        """Add a book function."""
         self.books.append(book)
 
     def remove_book(self, isbn: int):
+        """Remove a book from saved list."""
+
         for index, book in enumerate(self.books):
             if book.isbn == isbn:
                 self.books.pop(index)
@@ -47,6 +52,8 @@ class LibraryCatalogue:
         print(f"Book with ISBN {isbn} not found in library.")
 
     def search_by_title(self, title: str):
+        """Search for books by title."""
+
         matches = [book for book in self.books if title.lower() \
                    in book.title.lower()]
         if matches:
