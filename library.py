@@ -46,32 +46,37 @@ class LibraryCatalogue:
             for book in matches:
                 print(f"  - {book.title} by {book.author} ({book.isbn})")
                 if book.availability:
-                    print(f"      - Available for issue")
+                    print("      - Available for issue")
                 else:
-                    print(f"      - Currently unavailable")
+                    print("      - Currently unavailable")
         else:
             print(f"No books found matching '{title}'.")
 
     def search_by_isbn(self, isbn: int):
+        """Look up book by entered isbn."""
+
         for book in self.books:
             if book.isbn == isbn:
                 print(f"Book with ISBN {isbn}:")
                 print(f"  - Title: {book.title}")
                 print(f"  - Author: {book.author}")
                 if book.availability:
-                    print(f"      - Available for issue")
+                    print("      - Available for issue")
                 else:
-                    print(f"      - Currently unavailable")
+                    print("      - Currently unavailable")
                 return
         print(f"Book with ISBN {isbn} not found in library.")
 
     def list_books(self, isbn: int):
+        """List out books."""
         print("**Library Catalogue**")
         for book in self.books:
-            print(f"  - {book.title} by {book.author} ISBN: {isbn}")
+            print(f"  - {book.title} by {book.author}")
 
 
 def main():
+    """Where most things happen."""
+
     catalogue = LibraryCatalogue()
 
     while True:
