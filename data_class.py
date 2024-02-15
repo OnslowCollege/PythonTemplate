@@ -6,15 +6,23 @@ Date: 16/02/2024
 """
 
 # Import(s)
-from dataclasses import dataclass
+# from dataclasses import dataclass
 
-@dataclass
+# @dataclass
 class CakeRecipe:
     """Information to bake a cake."""
-    name: str
-    serving_number: int
-    vegan_friendly: bool
-    garnishes: list[str]
+
+    def __init__(self,
+                name: str,
+                serving_number: int,
+                vegan_friendly: bool,
+                garnishes: list[str]):
+        """Create a cake recipe."""
+        self.name = name
+        self.serving_number = serving_number
+        self.vegan_friendly = vegan_friendly
+        self.garnishes = garnishes
+
 
 my_cakes = [
     CakeRecipe("Banana Cake", 4 , True,
