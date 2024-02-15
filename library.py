@@ -34,7 +34,6 @@ class LibraryCatalogue:
 
     def __init__(self):
         """Add the details to the book."""
-
         self.books = books
 
     def add_book(self, book: Book):
@@ -46,9 +45,11 @@ class LibraryCatalogue:
 
         for index, book in enumerate(self.books):
             if book.isbn == isbn:
+
                 self.books.pop(index)
                 print(f"Book with ISBN {isbn} removed successfully.")
                 return
+
         print(f"Book with ISBN {isbn} not found in library.")
 
     def search_by_title(self, title: str):
@@ -56,14 +57,18 @@ class LibraryCatalogue:
 
         matches = [book for book in self.books if title.lower() \
                    in book.title.lower()]
+
         if matches:
             print(f"Found {len(matches)} books matching '{title}':")
             for book in matches:
+
                 print(f"  - {book.title} by {book.author} ({book.isbn})")
+
                 if book.availability:
                     print("      - Available for issue")
                 else:
                     print("      - Currently unavailable")
+
         else:
             print(f"No books found matching '{title}'.")
 
@@ -72,18 +77,22 @@ class LibraryCatalogue:
 
         for book in self.books:
             if book.isbn == isbn:
+
                 print(f"Book with ISBN {isbn}:")
                 print(f"  - Title: {book.title}")
                 print(f"  - Author: {book.author}")
+
                 if book.availability:
                     print("      - Available for issue")
                 else:
                     print("      - Currently unavailable")
                 return
+
         print(f"Book with ISBN {isbn} not found in library.")
 
     def list_books(self, isbn: int):
         """List out books."""
+
         print("**Library Catalogue**")
         for book in self.books:
             print(f"  - {book.title} by {book.author}")
@@ -94,7 +103,8 @@ def main():
 
     catalogue = LibraryCatalogue()
 
-    while True:
+    get_choice = True
+    while get_choice:
         print("\nLibrary Menu:")
         print("1. Add book")
         print("2. Remove book")
@@ -111,23 +121,28 @@ def main():
             isbn = int(input("Enter ISBN: "))
             catalogue.add_book(Book(title, author, isbn))
             print("Book added successfully.")
+
         elif choice == "2":
             isbn = int(input("Enter ISBN of book to remove: "))
             catalogue.remove_book(isbn)
+
         elif choice == "3":
             title = input("Enter book title to search: ")
             catalogue.search_by_title(title)
+
         elif choice == "4":
             isbn = int(input("Enter ISBN to search: "))
             catalogue.search_by_isbn(isbn)
+
         elif choice == "5":
             catalogue.list_books(isbn)
+
         elif choice == "6":
             print("Exiting library program.")
-            break
+            get_choice = False
+
         else:
             print("Invalid choice. Please try again.")
-
 
 if __name__ == "__main__":
     main()
