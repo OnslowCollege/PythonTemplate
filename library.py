@@ -65,10 +65,10 @@ class LibraryCatalogue:
                 return
         print(f"Book with ISBN {isbn} not found in library.")
 
-    def list_books(self):
+    def list_books(self, isbn: int):
         print("**Library Catalogue**")
         for book in self.books:
-            print(f"  - {book.title} by {book.author}")
+            print(f"  - {book.title} by {book.author} ISBN: {isbn}")
 
 
 def main():
@@ -101,7 +101,7 @@ def main():
             isbn = int(input("Enter ISBN to search: "))
             catalogue.search_by_isbn(isbn)
         elif choice == "5":
-            catalogue.list_books()
+            catalogue.list_books(isbn)
         elif choice == "6":
             print("Exiting library program.")
             break
