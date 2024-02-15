@@ -9,6 +9,8 @@ from dataclasses import dataclass
 
 @dataclass
 class Book:
+    """Stores book values."""
+
     title: str
     author: str
     isbn: int
