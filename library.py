@@ -6,7 +6,7 @@ Date: 14/02/2024
 """
 
 # Imports
-from dataclasses import (dataclass)
+from dataclasses import dataclass
 
 # Book class
 @dataclass
