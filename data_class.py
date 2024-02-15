@@ -16,18 +16,22 @@ class CakeRecipe:
     vegan_friendly: bool
     garnishes: list[str]
 
-banana_cake = CakeRecipe(
-    "Banana Cake",
-    4,
-    True,
-    ["Vegan ganache", "Candles",
-    "Banana slices"]
-)
+my_cakes = [
+    CakeRecipe("Banana Cake", 4 , True,
+               ["Vegan ganache", "Candles",
+                "Banana slices"]
+    ),
+    CakeRecipe("Strawberry Shortcake", 1, False,
+               ["Edible ball bearings"]
+    ),
+    CakeRecipe("Vinally sponge", 12, False, []
+    )
+]
 
-shortcake = CakeRecipe("Strawberry Shortcake", 1, False,
-    ["Edible ball bearings"]
+my_cakes.append(
+    CakeRecipe("Chocolate Cake", 1, True,
+        ["Cook's blood", "Sweat", "Tears"]
+    )
 )
-
-sponge_cake = CakeRecipe("Vinally sponge", 12, False, [])
 
 print(banana_cake.name)
