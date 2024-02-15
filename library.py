@@ -21,13 +21,18 @@ books = [
     Book("The Kuia and the Spider", "Patricia Grace", 124, True),
     Book("Where the Wild Things Are", "Maurice Sendak", 345, True),
     Book("Under the Mountain", "Maurice Gee", 346, True),
-    Book("How Māui Found His Father and the Magic Jawbone", "Peter Gossage", 410, True),
+    Book("How Māui Found His Father and the Magic Jawbone",
+         "Peter Gossage", 410, True),
 ]
 
 
 
 class LibraryCatalogue:
+    """Stores books in cataloge."""
+
     def __init__(self):
+        """Adds the details to the book."""
+
         self.books = books
 
     def add_book(self, book: Book):
