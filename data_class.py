@@ -34,4 +34,11 @@ my_cakes.append(
     )
 )
 
-print(banana_cake.name)
+for cake in my_cakes:
+    print("---------------")
+    print(f"Cake: {cake.name}")
+    print(f"Serves: {cake.serving_number}")
+    print(f"Vegan: {cake.vegan_friendly}")
+    print("Garnish with:")
+    for garnish in cake.garnishes:
+        print(f"- {garnish}")
