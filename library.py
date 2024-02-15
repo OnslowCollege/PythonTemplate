@@ -92,24 +92,28 @@ class LibraryCatalogue:
         for book in self.books:
             if book.isbn == isbn:
 
+                # Print details for the book
                 print(f"Book with ISBN {isbn}:")
                 print(f"  - Title: {book.title}")
                 print(f"  - Author: {book.author}")
 
+                # Print if book is available
                 if book.availability:
                     print("      - Available for issue")
                 else:
                     print("      - Currently unavailable")
                 return
 
+        # If isbn given doesn't match any book in list
         print(f"Book with ISBN {isbn} not found in library.")
 
-    def list_books(self, isbn: int):
+    # List all the books and their details
+    def list_books(self):
         """List out books."""
 
         print("**Library Catalogue**")
         for book in self.books:
-            print(f"  - {book.title} by {book.author}")
+            print(f"  - {book.title} by {book.autho")
 
 
 def main():
