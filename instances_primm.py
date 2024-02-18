@@ -12,10 +12,14 @@ class Film:
                  genre: str, imbd_rating: float):
         """Instance of film."""
         self.title = title if title.strip() != "" else "N/A"
+
         self.director = director if director.strip() != "" else "N/A"
+
         self.year_published = year_published if year_published >= 1878 \
                                 and year_published <= 2024 else "N/A"
+
         self.genre = genre if genre.strip() != "" else "N/A"
+
         self.imbd_rating = imbd_rating if imbd_rating >= 0 \
                             and imbd_rating <= 10 else "N/A"
 
