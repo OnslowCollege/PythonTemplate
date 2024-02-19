@@ -44,3 +44,4 @@ class Car:
         self.tank_size = tank_size
         self.km_per_litre = km_per_litre
 
+    def standard_range(self):
