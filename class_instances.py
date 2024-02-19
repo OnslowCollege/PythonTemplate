@@ -36,6 +36,9 @@ modern_film = Film("Barbie", "Greta Gerwig", 2023, "Comedy", 6.9)
 
 print(classic_film.title + " " + modern_film.director)
 
-
-
 classic_film.description()
+
+
+class Car:
+    def __init__(self, tank_size: float) -> None:
+        pass
