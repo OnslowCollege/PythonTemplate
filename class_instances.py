@@ -40,5 +40,7 @@ classic_film.description()
 
 
 class Car:
-    def __init__(self, tank_size: float) -> None:
-        pass
+    def __init__(self, tank_size: int, km_per_litre: int) -> None:
+        self.tank_size = tank_size
+        self.km_per_litre = km_per_litre
+
