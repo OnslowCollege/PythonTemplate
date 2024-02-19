@@ -40,8 +40,20 @@ classic_film.description()
 
 
 class Car:
-    def __init__(self, tank_size: int, km_per_litre: int) -> None:
+    """Class that stores avg km/L and tank size (Litres) for cars."""
+
+    def __init__(self, km_per_litre: int, tank_size: int):
+        """Set the values to the car."""
+
         self.tank_size = tank_size
         self.km_per_litre = km_per_litre
 
-    def standard_range(self):
+    def get_standard_range(self):
+        """Calculate the standard range by timsing avg km/l by tank size."""
+        return self.tank_size * self.km_per_litre
+
+toyota_prius = Car(20, 100)
+hyundai_tucson = Car(24, 80)
+
+print(f"Toyota Prius range: {toyota_prius.get_standard_range()}km")
+print(f"Hyunday Tucson: {hyundai_tucson.get_standard_range()}km")
