@@ -16,7 +16,7 @@ class BasketballPlayer:
         return self.total_goals / self.num_games_played
 
     def display_average(self):
-        print(f"Average goals per game: {self.calulate_agg()}")
+        print(f"{self.name}, Average goals per game: {self.calulate_agg()}")
 
 player_1 = BasketballPlayer("Karen", 20, 80)
 player_1.display_average()
