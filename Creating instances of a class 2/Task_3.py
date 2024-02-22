@@ -21,20 +21,24 @@ class Country:
         # Handle cases with zero land area
         else:
             return 0.0
+
     def display_data(self):
         print(f"Country name: {self.name}")
         print(f"Continent: {self.continent}")
         print(f"Leader: {self.leader}")
         print(f"Capital: {self.capital}")
-        print(f"Population: {self.population:,}")  # Use comma separator for readability
+        print(f"Population: {self.population:,}")
         print(f"Land Area: {self.land_area} km^2")
         print(f"Population Density: "
               f"{self.calculate_population_density():.2f} people/km^2")
 
 # Create some country objects
-ireland = Country("Ireland", "Europe", "Micheal Martin", "Dublin", 6399152, 84421)
-china = Country("China", "Asia", "Xi Jinping", "Beijing", 1444400000, 9596961)
-brazil = Country("Brazil", "South America", "Jair Bolsonaro", "Brasília", 215322959, 8515767)
+ireland = Country("Ireland", "Europe", "Micheal Martin",
+                  "Dublin", 6399152, 84421)
+china = Country("China", "Asia", "Xi Jinping",
+                "Beijing", 1444400000, 9596961)
+brazil = Country("Brazil", "South America", "Jair Bolsonaro",
+                 "Brasília", 215322959, 8515767)
 
 # Display their data
 print("\nCountry Details:")
