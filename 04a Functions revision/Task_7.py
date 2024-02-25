@@ -5,7 +5,7 @@ Created by: Arkin E
 Date: 26.02.2024
 """
 
-def input_int(prompt):
+def input_int(prompt) -> int:
     """
     Prompts the user for an integer, validates the input, and returns it.
 
@@ -28,7 +28,7 @@ def input_int(prompt):
 
     return value
 
-def input_float(prompt):
+def input_float(prompt) -> float:
     """
     Prompts the user for a float number, validates the input, and returns it.
 
@@ -50,7 +50,7 @@ def input_float(prompt):
 
     return value
 
-def input_bool(prompt):
+def input_bool(prompt) -> bool:
     """
     Prompts the user for a boolean value (yes/no).
     
@@ -78,7 +78,6 @@ def input_bool(prompt):
 
     return value in {"yes", "y", "true", "t"}
 
-# Example usage
-
 age = input_int("How old are you? ")
 is_happy = input_bool("Are you happy? ")
+average_
