@@ -19,8 +19,5 @@ def get_image_bits(width: int, height: int, depth: int = 32) -> int:
     pixels = width * height
     return pixels * depth
 
-
-
-
 bit_count = get_image_bits(100, 200, 32)
 print(bit_count)
