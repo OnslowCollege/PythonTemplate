@@ -76,13 +76,12 @@ def input_bool(prompt) -> bool:
         else:
             print("Invalid input. Please enter yes/no or true/false.")
 
-    
-    if value in list["yes", "y", "true", "t"]:
-        return True
-    elif value in list["no", "n", "false", "f"]:
-        return False
+    return value in ["yes", "y", "true", "t"]
 
 
 age = input_int("How old are you? ")
 is_happy = input_bool("Are you happy? ")
-gpa = input_float
+gpa = input_float("What is your GPA? ")
+
+
+print(is_happy)
