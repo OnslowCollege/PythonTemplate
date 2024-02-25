@@ -85,4 +85,4 @@ def input_bool(prompt) -> bool:
 
 age = input_int("How old are you? ")
 is_happy = input_bool("Are you happy? ")
-average_
+gpa = input_float
