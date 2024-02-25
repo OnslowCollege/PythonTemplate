@@ -85,3 +85,5 @@ gpa = input_float("What is your GPA? ")
 
 
 print(is_happy)
+print(age)
+print(gpa)
