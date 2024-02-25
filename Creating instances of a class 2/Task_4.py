@@ -20,13 +20,14 @@ class CellPhone:
         internet_str = "with internet access" if self.internet \
             else "without internet access"
         print(f"Make: {self.make}, Model: {self.model},"
-            f"Year: {self.year}, Price: ${self.price:.2f}")
+            f" Year: {self.year}, Price: ${self.price:.2f}")
         print(f"Features: {camera_str}, {internet_str}")
 
     def depreciated_value(self, years):
         depreciation_rate = 0.67
         depreciated_value = self.price * (1 - depreciation_rate) ** years
-        return f"Depreciated value after {years} years: ${depreciated_value:.2f}"
+        return f"Depreciated value after {years}" \
+               f" years: ${depreciated_value:.2f}\n"
 
 
 p1 = CellPhone("Nokia", "6610", 2002, 400)
