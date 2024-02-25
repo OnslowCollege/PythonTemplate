@@ -66,12 +66,13 @@ def input_bool(prompt) -> bool:
     (True for yes/y/true/t, False for no/n/false/f).
     """
 
-    valid_inputs = {"yes", "y", "true", "t", "no", "n", "false", "f"}
+    valid_inputs = ["yes", "y", "true", "t", "no", "n", "false", "f"]
 
     loop = True
     while loop:
         value = input(prompt).lower()
         if value in valid_inputs:
+            return True
             loop = False
         else:
             print("Invalid input. Please enter yes/no or true/false.")
