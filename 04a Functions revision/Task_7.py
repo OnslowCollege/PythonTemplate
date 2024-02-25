@@ -72,11 +72,16 @@ def input_bool(prompt) -> bool:
     while loop:
         value = input(prompt).lower().strip()
         if value in valid_inputs:
-            return True if value in list["yes", "y", "true", "t"] \
-                else False if value in list["no", "n", "false", "f"]
-                loop = False
+            loop = False
         else:
             print("Invalid input. Please enter yes/no or true/false.")
+
+    
+    if value in list["yes", "y", "true", "t"]:
+        return True
+    elif value in list["no", "n", "false", "f"]:
+        return False
+
 
 age = input_int("How old are you? ")
 is_happy = input_bool("Are you happy? ")
