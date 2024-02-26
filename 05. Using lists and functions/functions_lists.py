@@ -6,7 +6,7 @@ Date: 26.02.2024
 """
 
 class Student:
-    def __init__(self, name: str, id: int, grades: list[int]):
+    def __init__(self, name: str, student_id: int, grades: list[int]):
         self.name = name
         self.student_id = student_id
         self.grades = grades
