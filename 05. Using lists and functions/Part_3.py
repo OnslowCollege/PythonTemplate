@@ -26,13 +26,18 @@ def get_school_info():
 
 def main():
     print("School 1 Information")
+
     name1, students1, classrooms1 = get_school_info()
     school1 = School(name1, students1, classrooms1)
+
     school1.show_info()
 
+
     print("\nSchool 2 Information")
+
     name2, students2, classrooms2 = get_school_info()
     school2 = School(name2, students2, classrooms2)
+
     school2.show_info()
 
 if __name__ == "__main__":
