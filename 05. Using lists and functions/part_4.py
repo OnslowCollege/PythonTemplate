@@ -27,7 +27,7 @@ def get_school_info():
 def main():
     schools = []
 
-    for i in range(2):  # Loop to create 2 school objects
+    for i in range(2):
         print(f"\nSchool {i+1} Information")
         name, students, classrooms = get_school_info()
         schools.append(School(name, students, classrooms))
@@ -36,7 +36,6 @@ def main():
     for school in schools:
         school.show_info()
 
-    # Extension: Find and display the school with the lowest class size
     smallest_school = min(schools, key=lambda s: s.avg_students_per_classroom())
     print("\nSchool with the lowest class size:")
     smallest_school.show_info()
